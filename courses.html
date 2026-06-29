@@ -1,123 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programmes | Hive Academy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <title>Cours | HIVE Academy</title>
+  <meta name="description" content="Cours HIVE Academy : Robotique Junior, Robotique, Développement Web, Informatique 2ème et 3ème.">
 </head>
-<body>
+<body data-page="courses">
+<header class="topbar">
+  <nav class="nav container">
+    <a class="logo" href="index.html" aria-label="HIVE Academy"></a>
+    <button class="menu-btn" data-menu type="button">Menu</button>
+    <div class="navlinks" data-links>
+      <a href="index.html" data-nav="home">Accueil</a>
+      <a href="courses.html" data-nav="courses">Cours</a>
+      <a href="booking.html" data-nav="booking">Inscription</a>
+      <a class="nav-button" href="booking.html">Réserver</a>
+    </div>
+  </nav>
+</header>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">HIVE<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html" data-local="nav_home">Accueil</a></li>
-                <li><a href="courses.html" data-local="nav_courses">Programmes</a></li>
-                <li><a href="booking.html" data-local="nav_join">S'inscrire</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button id="langToggle" class="btn-icon">EN</button>
-                <button id="themeToggle" class="btn-icon"><i class="fas fa-moon"></i></button>
-            </div>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="logo logo-center"></div>
+      <span class="kicker">Programmes</span>
+      <h1>Choisissez le bon cours.</h1>
+      <p>Des prix fixes, des niveaux clairs, et un apprentissage centré sur la pratique.</p>
+    </div>
+  </section>
+
+  <section class="section programs-shell">
+    <div class="container program-grid">
+      <article class="program-card featured">
+        <div>
+          <div class="program-meta"><span class="pill gold">Sans limite d’âge</span><span class="pill">60 DT / mois</span></div>
+          <h3>Développement Web</h3>
+          <p class="muted">Un parcours propre pour apprendre à créer des pages web, comprendre la structure d’un site et construire des projets progressivement.</p>
+          <ul><li>HTML, CSS et JavaScript.</li><li>Création de pages web.</li><li>Projets simples et progressifs.</li></ul>
         </div>
-    </nav>
-
-    <main class="container" style="padding-top: 4rem;">
-        <h2 class="section-title">Nos Programmes Répartis</h2>
-        
-        <div class="grid grid-2">
-            <div class="card">
-                <span class="badge" style="width:fit-content; margin-bottom:1rem;">6 - 12 ans</span>
-                <h3>Atelier Robotique Junior</h3>
-                <p>Découverte de la logique algorithmique et construction mécanique simple.</p>
-                <ul class="card-list">
-                    <li>Initiation aux blocs logiques</li>
-                    <li>Montage d'engrenages et moteurs</li>
-                    <li>Développement de la créativité</li>
-                </ul>
-                <div class="card-footer">
-                    <div class="price">80 TND <span>/ mois</span></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <span class="badge" style="width:fit-content; margin-bottom:1rem;">14 - 18 ans</span>
-                <h3>Microélectronique & Arduino</h3>
-                <p>Programmation avancée en C++ et contrôle de circuits imprimés réels.</p>
-                <ul class="card-list">
-                    <li>Câblage de capteurs physiques</li>
-                    <li>Code natif orienté objet</li>
-                    <li>Résolution de pannes concrètes</li>
-                </ul>
-                <div class="card-footer">
-                    <div class="price">80 TND <span>/ mois</span></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <span class="badge" style="width:fit-content; margin-bottom:1rem;">Ados & Adultes</span>
-                <h3>Ingénierie Web Moderne</h3>
-                <p>Conception d'interfaces fluides et programmation de serveurs fiables.</p>
-                <ul class="card-list">
-                    <li>HTML5, CSS3 Grid et JavaScript standard</li>
-                    <li>Introduction au backend et bases de données</li>
-                    <li>Mise en ligne de projets personnels</li>
-                </ul>
-                <div class="card-footer">
-                    <div class="price">60 TND <span>/ mois</span></div>
-                </div>
-            </div>
-
-            <div class="card">
-                <span class="badge" style="width:fit-content; margin-bottom:1rem;">Lycéens</span>
-                <h3>Soutien Académique & Épreuve BAC</h3>
-                <p>Renforcement complet sur le programme informatique des sections scientifiques.</p>
-                <ul class="card-list">
-                    <li>Algorithmes et structures de données</li>
-                    <li>Pratique guidée pas à pas</li>
-                    <li>Examens blancs blancs types</li>
-                </ul>
-                <div class="card-footer">
-                    <div class="price">60 TND <span>/ mois</span></div>
-                </div>
-            </div>
+        <div class="program-note">
+          <strong>Idéal pour commencer la création digitale.</strong>
+          <span class="muted">Aucun âge imposé. Le rythme s’adapte au niveau de l’élève.</span>
         </div>
-    </main>
+        <a class="btn btn-dark" href="booking.html?course=D%C3%A9veloppement%20Web">S’inscrire</a>
+      </article>
 
-    <footer class="footer">
-        <div class="container footer-main">
-            <div class="footer-col">
-                <a href="index.html" class="logo">HIVE<span>.</span></a>
-                <p data-local="footer_desc">Hive Academy est un club d'apprentissage technologique dédié à la formation pratique de la nouvelle génération de créateurs.</p>
-            </div>
-            <div class="footer-col">
-                <h4 data-local="footer_nav">Navigation</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html" data-local="nav_home">Accueil</a></li>
-                    <li><a href="courses.html" data-local="nav_courses">Programmes</a></li>
-                    <li><a href="booking.html" data-local="nav_join">S'inscrire</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 data-local="footer_location">Localisation</h4>
-                <ul class="footer-contacts">
-                    <li><i class="fas fa-map-marker-alt"></i> Nour Academy, Manouba, Tunis</li>
-                    <li><i class="fas fa-phone"></i> +216 55 328 004</li>
-                    <li><i class="fas fa-envelope"></i> hiveclub2024@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <div>&copy; 2026 Hive Academy. Tous droits réservés.</div>
-            <div class="footer-socials">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
+      <article class="program-card">
+        <div class="program-top"><div><div class="program-meta"><span class="pill">15–18 ans</span></div><h3>Robotique Junior</h3></div><div class="price">80 DT <small>/ mois</small></div></div>
+        <ul><li>Découverte des composants.</li><li>Montage et câblage guidés.</li><li>Premiers projets robotiques.</li></ul>
+        <a class="btn btn-dark" href="booking.html?course=Robotique%20Junior">S’inscrire</a>
+      </article>
 
-    <script src="script.js"></script>
+      <article class="program-card">
+        <div class="program-top"><div><div class="program-meta"><span class="pill">15–18 ans</span></div><h3>Robotique</h3></div><div class="price">80 DT <small>/ mois</small></div></div>
+        <ul><li>Projets robotiques pratiques.</li><li>Capteurs, moteurs et logique.</li><li>Tests, correction et amélioration.</li></ul>
+        <a class="btn btn-dark" href="booking.html?course=Robotique">S’inscrire</a>
+      </article>
+
+      <article class="program-card">
+        <div class="program-top"><div><div class="program-meta"><span class="pill">2ème</span></div><h3>Informatique 2ème</h3></div><div class="price">60 DT <small>/ mois</small></div></div>
+        <ul><li>Explication du cours.</li><li>Exercices et correction.</li><li>Suivi régulier.</li></ul>
+        <a class="btn btn-dark" href="booking.html?course=Informatique%202%C3%A8me">S’inscrire</a>
+      </article>
+
+      <article class="program-card">
+        <div class="program-top"><div><div class="program-meta"><span class="pill">3ème</span></div><h3>Informatique 3ème</h3></div><div class="price">60 DT <small>/ mois</small></div></div>
+        <ul><li>Révision structurée.</li><li>Exercices pratiques.</li><li>Progression selon le niveau.</li></ul>
+        <a class="btn btn-dark" href="booking.html?course=Informatique%203%C3%A8me">S’inscrire</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-card"><div class="logo"></div></div>
+        <p>Une academy pratique pour apprendre le code, la robotique et l’informatique avec une approche simple et concrète.</p>
+      </div>
+      <div>
+        <h4>Cours</h4>
+        <a href="courses.html">Robotique</a>
+        <a href="courses.html">Développement Web</a>
+        <a href="courses.html">Informatique</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+21655328004">55 328 004</a>
+        <a href="mailto:hiveclub2024@gmail.com">hiveclub2024@gmail.com</a>
+      </div>
+      <div>
+        <h4>Adresse & réseaux</h4>
+        <p>Tunis, Manouba</p>
+        <a href="https://www.facebook.com/profile.php?id=61591514100139" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/_hiveacademy/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 HIVE Academy. Tous droits réservés.</span>
+      <span>Code · Build · Create · Grow</span>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
