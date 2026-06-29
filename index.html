@@ -1,93 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hive Academy | Club de Code & Robotique</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <title>HIVE Academy | Code, Robotique & Informatique</title>
+  <meta name="description" content="HIVE Academy à Tunis, Manouba : code, robotique et informatique avec une approche pratique.">
 </head>
-<body>
+<body data-page="home">
+<header class="topbar">
+  <nav class="nav container">
+    <a class="logo" href="index.html" aria-label="HIVE Academy"></a>
+    <button class="menu-btn" data-menu type="button">Menu</button>
+    <div class="navlinks" data-links>
+      <a href="index.html" data-nav="home">Accueil</a>
+      <a href="courses.html" data-nav="courses">Cours</a>
+      <a href="booking.html" data-nav="booking">Inscription</a>
+      <a class="nav-button" href="booking.html">Réserver</a>
+    </div>
+  </nav>
+</header>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">HIVE<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html" data-local="nav_home">Accueil</a></li>
-                <li><a href="courses.html" data-local="nav_courses">Programmes</a></li>
-                <li><a href="booking.html" data-local="nav_join">S'inscrire</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button id="langToggle" class="btn-icon" style="font-size: 0.75rem; font-weight:700;">EN</button>
-                <button id="themeToggle" class="btn-icon"><i class="fas fa-moon"></i></button>
-            </div>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="kicker">HIVE Academy · Depuis 2024</span>
+        <h1>Learn by building real things.</h1>
+        <p class="lead">Une academy moderne à Tunis, Manouba pour apprendre le code, la robotique et l’informatique à travers des projets concrets.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="booking.html">S’inscrire</a>
+          <a class="btn btn-soft" href="courses.html">Voir les cours</a>
         </div>
-    </nav>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-inner">
+          <div class="hero-feature"><strong>Code</strong><span>Créer des sites et comprendre le web.</span></div>
+          <div class="hero-feature"><strong>Robotique</strong><span>Construire, tester et améliorer des projets.</span></div>
+          <div class="hero-feature"><strong>Informatique</strong><span>Progresser avec un accompagnement clair.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <header class="hero">
-        <div class="container">
-            <span class="badge badge-accent" data-local="hero_badge">Inscriptions Ouvertes — Session 2026</span>
-            <h1 data-local="hero_title">Découvrez le code et la robotique.</h1>
-            <p data-local="hero_subtitle">Le club tech d'élite pour enfants, adolescents et lycéens. Apprenez par la pratique avec des mentors passionnés.</p>
-            <div class="hero-cta">
-                <a href="booking.html" class="btn btn-primary" data-local="btn_start">Rejoindre le Club</a>
-                <a href="courses.html" class="btn btn-secondary" data-local="btn_explore">Voir les Programmes</a>
-            </div>
-        </div>
-    </header>
+  <section class="section">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Une approche simple et pratique.</h2>
+        <p>Les élèves apprennent en manipulant, en créant, en testant et en corrigeant. Chaque séance vise un progrès concret.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">⌨</div><h3>Développement Web</h3><p>HTML, CSS, JavaScript et création de pages web propres.</p></article>
+        <article class="card"><div class="card-icon">⚙</div><h3>Robotique</h3><p>Montage, câblage, capteurs, moteurs et logique de projet.</p></article>
+        <article class="card"><div class="card-icon">💻</div><h3>Informatique</h3><p>Suivi pour les niveaux 2ème et 3ème avec exercices.</p></article>
+      </div>
+    </div>
+  </section>
 
-    <main class="container">
-        <div class="grid grid-3">
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-microchip"></i></div>
-                <h3 data-local="track_robo">Robotique & Électronique</h3>
-                <p data-local="track_robo_desc">De l'assemblage mécanique à la programmation de circuits et de capteurs Arduino.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-code"></i></div>
-                <h3 data-local="track_web">Développement Web & Code</h3>
-                <p data-local="track_web_desc">Créez de vraies applications web fonctionnelles avec les langages fondamentaux de l'industrie.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
-                <h3 data-local="track_school">Soutien Informatique Lycée</h3>
-                <p data-local="track_school_desc">Accompagnement rigoureux pour les élèves de 2ème, 3ème année et préparation à l'épreuve du BAC.</p>
-            </div>
-        </div>
-    </main>
+  <section class="section">
+    <div class="container panel">
+      <div>
+        <h2>Des prix clairs. Des cours concrets.</h2>
+        <p>Les programmes sont directs : robotique pour 15–18 ans, web ouvert à tous, informatique pour 2ème et 3ème.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><b>80 DT/mois</b> Robotique Junior & Robotique</div>
+        <div class="step"><b>60 DT/mois</b> Développement Web</div>
+        <div class="step"><b>60 DT/mois</b> Informatique 2ème & 3ème</div>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <footer class="footer">
-        <div class="container footer-main">
-            <div class="footer-col">
-                <a href="index.html" class="logo">HIVE<span>.</span></a>
-                <p data-local="footer_desc">Hive Academy est un club d'apprentissage technologique dédié à la formation pratique de la nouvelle génération de créateurs.</p>
-            </div>
-            <div class="footer-col">
-                <h4 data-local="footer_nav">Navigation</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html" data-local="nav_home">Accueil</a></li>
-                    <li><a href="courses.html" data-local="nav_courses">Programmes</a></li>
-                    <li><a href="booking.html" data-local="nav_join">S'inscrire</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 data-local="footer_location">Localisation</h4>
-                <ul class="footer-contacts">
-                    <li><i class="fas fa-map-marker-alt"></i> Nour Academy, Manouba, Tunis</li>
-                    <li><i class="fas fa-phone"></i> +216 55 328 004</li>
-                    <li><i class="fas fa-envelope"></i> hiveclub2024@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <div>&copy; 2026 Hive Academy. Tous droits réservés.</div>
-            <div class="footer-socials">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-card"><div class="logo"></div></div>
+        <p>Une academy pratique pour apprendre le code, la robotique et l’informatique avec une approche simple et concrète.</p>
+      </div>
+      <div>
+        <h4>Cours</h4>
+        <a href="courses.html">Robotique</a>
+        <a href="courses.html">Développement Web</a>
+        <a href="courses.html">Informatique</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+21655328004">55 328 004</a>
+        <a href="mailto:hiveclub2024@gmail.com">hiveclub2024@gmail.com</a>
+      </div>
+      <div>
+        <h4>Adresse & réseaux</h4>
+        <p>Tunis, Manouba</p>
+        <a href="https://www.facebook.com/profile.php?id=61591514100139" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/_hiveacademy/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 HIVE Academy. Tous droits réservés.</span>
+      <span>Code · Build · Create · Grow</span>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
