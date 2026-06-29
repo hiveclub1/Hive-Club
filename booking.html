@@ -1,124 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription | Hive Academy</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <title>Inscription | HIVE Academy</title>
+  <meta name="description" content="Inscription HIVE Academy : code, robotique et informatique à Tunis, Manouba.">
 </head>
-<body>
+<body data-page="booking">
+<header class="topbar">
+  <nav class="nav container">
+    <a class="logo" href="index.html" aria-label="HIVE Academy"></a>
+    <button class="menu-btn" data-menu type="button">Menu</button>
+    <div class="navlinks" data-links>
+      <a href="index.html" data-nav="home">Accueil</a>
+      <a href="courses.html" data-nav="courses">Cours</a>
+      <a href="booking.html" data-nav="booking">Inscription</a>
+      <a class="nav-button" href="booking.html">Réserver</a>
+    </div>
+  </nav>
+</header>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">HIVE<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html" data-local="nav_home">Accueil</a></li>
-                <li><a href="courses.html" data-local="nav_courses">Programmes</a></li>
-                <li><a href="booking.html" data-local="nav_join">S'inscrire</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button id="langToggle" class="btn-icon">EN</button>
-                <button id="themeToggle" class="btn-icon"><i class="fas fa-moon"></i></button>
-            </div>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <div class="logo logo-center"></div>
+      <span class="kicker">Inscription</span>
+      <h1>Réservez une place.</h1>
+      <p>Remplissez le formulaire. Nous vous contacterons pour confirmer l’inscription.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container booking-grid">
+      <aside class="contact-card">
+        <h3>Contact</h3>
+        <div class="info-list">
+          <div class="info-row"><span>Téléphone</span><b>55 328 004</b></div>
+          <div class="info-row"><span>Email</span><b><a href="mailto:hiveclub2024@gmail.com">hiveclub2024@gmail.com</a></b></div>
+          <div class="info-row"><span>Adresse</span><b>Tunis, Manouba</b></div>
+          <div class="info-row"><span>Facebook</span><b><a href="https://www.facebook.com/profile.php?id=61591514100139" target="_blank" rel="noopener">HIVE Academy</a></b></div>
+          <div class="info-row"><span>Instagram</span><b><a href="https://www.instagram.com/_hiveacademy/" target="_blank" rel="noopener">@_hiveacademy</a></b></div>
         </div>
-    </nav>
+      </aside>
 
-    <main class="container" style="padding-top: 4rem;">
-        <div class="form-box">
-            <h2 class="section-title" style="margin-bottom:0.5rem;" data-local="form_title">Demande d'Inscription</h2>
-            <p style="text-align:center; color:var(--text-muted); margin-bottom: 3rem;" data-local="form_subtitle">Remplissez ce formulaire d'admission. Notre équipe prendra contact avec vous rapidement.</p>
-            
-            <form id="admissionForm">
-                <input type="hidden" name="access_key" id="web3_token_field">
+      <section class="form-card">
+        <form id="bookingForm">
+          <input type="hidden" name="access_key" id="access_key">
+          <input type="hidden" name="subject" value="Nouvelle inscription HIVE Academy">
+          <input type="checkbox" name="botcheck" class="hidden">
 
-                <div class="form-group">
-                    <label data-local="lbl_program">Sélectionnez le Programme</label>
-                    <select class="form-control" name="filiere_choisie" id="courseField" required>
-                        <option value="" disabled selected>-- Choix du parcours --</option>
-                        <option value="robo_jr">Robotique Junior (6-12 ans)</option>
-                        <option value="robo_sr">Microélectronique Advanced (14-18 ans)</option>
-                        <option value="web_front">Développement Web Front-End</option>
-                        <option value="web_back">Architecture Web Back-End</option>
-                        <option value="school_2">Informatique de niveau 2ème année</option>
-                        <option value="school_3">Informatique de niveau 3ème année</option>
-                        <option value="school_bac">Préparation intensive Épreuve BAC</option>
-                    </select>
-                </div>
+          <div class="form-row">
+            <label>Nom et prénom de l’élève
+              <input name="student_name" required placeholder="Nom complet">
+            </label>
+            <label>Âge
+              <input name="age" placeholder="Âge">
+            </label>
+          </div>
 
-                <div class="plans-selector">
-                    <label class="plan-card">
-                        <input type="radio" name="billing_term" value="monthly" checked>
-                        <h4 data-local="opt_monthly">Forfait Mensuel</h4>
-                        <p>Facturation de base au mois</p>
-                    </label>
-                    <label class="plan-card">
-                        <input type="radio" name="billing_term" value="quarterly">
-                        <h4 data-local="opt_quarterly">Forfait Trimestriel</h4>
-                        <p data-local="opt_save">Économisez sur 3 mois</p>
-                    </label>
-                </div>
+          <label>Cours choisi
+            <select name="course" id="courseSelect" required>
+              <option value="">Choisir un cours</option>
+              <option>Robotique Junior</option>
+              <option>Robotique</option>
+              <option>Développement Web</option>
+              <option>Informatique 2ème</option>
+              <option>Informatique 3ème</option>
+            </select>
+          </label>
 
-                <div class="form-group">
-                    <label data-local="lbl_name">Nom complet de l'élève</label>
-                    <input type="text" class="form-control" name="nom_complet" placeholder="Ex: Ahmed Ben Ali" required>
-                </div>
+          <div class="form-row">
+            <label>Nom du parent
+              <input name="parent_name" placeholder="Nom du parent">
+            </label>
+            <label>Téléphone
+              <input name="phone" required placeholder="55 328 004">
+            </label>
+          </div>
 
-                <div class="row">
-                    <div class="form-group">
-                        <label data-local="lbl_phone">Numéro de téléphone</label>
-                        <input type="tel" class="form-control" name="telephone" placeholder="55 328 004" required>
-                    </div>
-                    <div class="form-group">
-                        <label data-local="lbl_email">Adresse e-mail</label>
-                        <input type="email" class="form-control" name="email_contact" placeholder="contact@domaine.tn" required>
-                    </div>
-                </div>
+          <label>Message
+            <textarea name="message" placeholder="Remarque ou disponibilité"></textarea>
+          </label>
 
-                <div class="summary-bar">
-                    <div class="summary-total">
-                        <span data-local="lbl_total">Tarif calculé :</span>
-                        <div id="priceOutput">0 TND</div>
-                    </div>
-                    <button type="submit" id="submitTrigger" class="btn btn-primary" data-local="btn_submit">Envoyer l'inscription</button>
-                </div>
-                <div id="logCallback" style="margin-top: 1.5rem; text-align: center; font-size: 0.9rem; font-weight: 500;"></div>
-            </form>
-        </div>
-    </main>
+          <button class="btn btn-primary" type="submit">Envoyer l’inscription</button>
+          <div class="notice" id="formNotice"></div>
+        </form>
+      </section>
+    </div>
+  </section>
+</main>
 
-    <footer class="footer">
-        <div class="container footer-main">
-            <div class="footer-col">
-                <a href="index.html" class="logo">HIVE<span>.</span></a>
-                <p data-local="footer_desc">Hive Academy est un club d'apprentissage technologique dédié à la formation pratique de la nouvelle génération de créateurs.</p>
-            </div>
-            <div class="footer-col">
-                <h4 data-local="footer_nav">Navigation</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html" data-local="nav_home">Accueil</a></li>
-                    <li><a href="courses.html" data-local="nav_courses">Programmes</a></li>
-                    <li><a href="booking.html" data-local="nav_join">S'inscrire</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 data-local="footer_location">Localisation</h4>
-                <ul class="footer-contacts">
-                    <li><i class="fas fa-map-marker-alt"></i> Nour Academy, Manouba, Tunis</li>
-                    <li><i class="fas fa-phone"></i> +216 55 328 004</li>
-                    <li><i class="fas fa-envelope"></i> hiveclub2024@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <div>&copy; 2026 Hive Academy. Tous droits réservés.</div>
-            <div class="footer-socials">
-                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-card"><div class="logo"></div></div>
+        <p>Une academy pratique pour apprendre le code, la robotique et l’informatique avec une approche simple et concrète.</p>
+      </div>
+      <div>
+        <h4>Cours</h4>
+        <a href="courses.html">Robotique</a>
+        <a href="courses.html">Développement Web</a>
+        <a href="courses.html">Informatique</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+21655328004">55 328 004</a>
+        <a href="mailto:hiveclub2024@gmail.com">hiveclub2024@gmail.com</a>
+      </div>
+      <div>
+        <h4>Adresse & réseaux</h4>
+        <p>Tunis, Manouba</p>
+        <a href="https://www.facebook.com/profile.php?id=61591514100139" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/_hiveacademy/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 HIVE Academy. Tous droits réservés.</span>
+      <span>Code · Build · Create · Grow</span>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
